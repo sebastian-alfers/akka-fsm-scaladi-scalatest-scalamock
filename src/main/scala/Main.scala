@@ -19,16 +19,9 @@ object Main extends App{
   println("started...")
 
 
-  val props = Props(classOf[Example], inj)
+  val props = Props(classOf[Example], "production", inj)
   val actor = system.actorOf(props)
 
-  actor ! Play
-  actor ! Play
-  actor ! Play
-  actor ! Play
-  actor ! Play
-  actor ! Play
-  actor ! Play
   actor ! Play
 
 }
